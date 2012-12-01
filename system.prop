@@ -1,0 +1,83 @@
+#
+#
+# begin of volatile config
+com.ti.omap_enhancement=true
+
+# Display
+ro.opengles.version=131072
+ro.sf.lcd_density=320
+hwui.render_dirty_regions=false
+persist.sys.ui.hw = 1
+
+# Wi-Fi
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=120
+
+# RIL
+ro.telephony.ril_class=RIL
+audioril.lib=libhuawei-audio-ril.so
+mobiledata.interfaces=pdp0,wlan0,gprs,ppp0,rmnet0
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+ro.ril.power_collapse=1
+pm.sleep_mode=1
+ro.telephony.call_ring.delay=0
+ro.config.hw_fast_dormancy=1
+ro.ril.enable.amr.wideband=1
+persist.cust.tel.eons=1
+
+# GPS
+ro.config.hw_gps=4751
+
+# USB
+persist.sys.usb.config=mtp,adb
+
+# Huawei specific
+ro.config.fm_type=libbcmfm_if
+ro.config.KeyPassToUser=true
+ro.config.hw_isCustomize=true
+ro.config.hw_customizeType=1
+ro.config.hw_addsettingsdbex=1
+ro.config.hw_menu_unlockscreen=false
+ro.config.incall_notify_mms=true
+ro.config.hw_GSensorOptimize=true
+ro.config.hw_vcardBase64=true
+ro.config.endstksession=true
+ro.config.hw_omacp=1
+ro.config.hw_voicerecord=true
+ro.config.hw_ecclist_withcard=1+110,6+119,8+118
+ro.config.hw_ecclist_nocard=1+110,6+119,8+118
+ro.config.hw_globalEcc = true
+ro.config.hw_flashless=true
+ro.config.hw_boardid=unknown
+ro.config.hw_power_saving=true
+ro.config.hw_quickpoweron=true
+ro.config.do_sdcard_upgrade=true
+persist.sys.quickpoweron=normal
+persist.sys.animationstart=false
+ro.config.hw_poanimation=5000
+persist.sys.powerup_reason=
+ro.poweroff_alarm=true
+persist.sys.actualpoweron=true
+ro.config.hw_allow_ums_and_mtp=true
+ro.config.hw_dolby=true
+ro.config.hw_dolby_config=front
+ro.config.sim_hot_swap=true
+persist.sys.main_storage=sdcard0
+ro.config.internal_sdcard=yes
+ro.config.hw_proximitySensor=true
+ro.config.CphsOnsEnabled=false
+gsm.sim.num.pin2=3
+gsm.sim.num.puk2=10
+ro.config.hw_battery_percent = true
+ro.config.bg_call_twinking = true
+ro.config.hw_remindBT=true
+ro.config.helix_a_enable=false
+ro.config.helix_b_enable=false
+drm.service.enabled=false
+ro.huawei.cust.drm.fl_only=false
+ro.config.hw_pic_limit_size=50
+ro.config.doublehome=true
+ro.config.hw_ramSize=930504
+ro.media.enc.jpeg.quality=100
+#
