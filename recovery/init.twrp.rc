@@ -14,14 +14,11 @@ on init
     chmod 0755 /sbin/busybox
 
     mkdir /boot
-    mkdir /sdcard
-    mkdir /sd-ext
-    mkdir /datadata
-    mkdir /emmc
     mkdir /system
     mkdir /cust
     mkdir /data
     mkdir /cache
+    mkdir /sdcard
     mount /tmp /tmp tmpfs
 
 on boot
@@ -32,24 +29,9 @@ on boot
 
 # leds
     chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/brightness
-    chown system system /sys/class/leds/blue/brightness
-    chown system system /sys/class/leds/red/device/grpfreq
-    chown system system /sys/class/leds/red/device/grppwm
-    chown system system /sys/class/leds/red/device/blink
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/green/brightness
-    chown system system /sys/class/leds/blue/brightness
-    chown system system /sys/class/leds/red/device/grpfreq
-    chown system system /sys/class/leds/red/device/grppwm
-    chown system system /sys/class/leds/red/device/blink
-    chown system system /sys/bus/i2c/drivers/tps61310/3-0033/tps61310_led_lightness
-    chown system system /sys/devices/platform/omap/omap_i2c.4/i2c-4/4-0045/leds/red/delay_on
-    chown system system /sys/devices/platform/omap/omap_i2c.4/i2c-4/4-0045/leds/red/delay_off
-    chown system system /sys/devices/platform/omap/omap_i2c.4/i2c-4/4-0045/leds/green/delay_on
-    chown system system /sys/devices/platform/omap/omap_i2c.4/i2c-4/4-0045/leds/green/delay_off
-    chown system system /sys/devices/platform/omap/omap_i2c.4/i2c-4/4-0045/leds/blue/delay_on
-    chown system system /sys/devices/platform/omap/omap_i2c.4/i2c-4/4-0045/leds/blue/delay_off
+    chown system system /sys/class/leds/green/blink
 
     class_start default
 
@@ -57,6 +39,7 @@ service ueventd /sbin/ueventd
     critical
 
 service chargeservice /sbin/chargeservice
+	oneshot
 
 service dmesg /sbin/busybox dmesg -n 1
 	oneshot
